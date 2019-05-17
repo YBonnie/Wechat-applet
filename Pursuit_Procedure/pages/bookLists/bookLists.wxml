@@ -1,0 +1,47 @@
+<view class="content animated fadeInUp">
+	<view class="nav-one">
+		<view wx:for="{{navList01}}" bindtap="choice01" data-index="{{index}}" data-title="{{item.title}}" data-path="{{item.path}}" wx:key="*this" class="{{index == activeIndex01 ? 'navActiveOne' : ''}}">{{item.title}}</view>
+	</view>
+	<view class="nav-two">
+		<view wx:for="{{navList02}}" data-name="{{item}}"  bindtap="choice02" data-index="{{index}}" data-item="{{item}}" wx:key="*this" class="{{item == activeIndex02 ? 'navActiveOne' : ''}}">{{item}}</view>
+		<view class="select" bindtap="clickDown">筛选<text class="icon iconfont {{downActive?'icon-xiangxia':'icon-xiangshang'}}"></text></view>
+	</view>
+	
+	
+		<scroll-view  wx:if="{{showActive}}" scroll-y="true" scroll-with-animation="true" style='height:{{winHeight}}rpx;'  scroll-with-animation="true">
+			<view class="list-box" wx:for="{{bookLists}}" wx:key="*this" wx:for-index="index" wx:for-item="item" bindtap="goDetailPage" data-id="{{item._id}}">
+		<view class="txt">
+			<view class="title">{{item.title}}</view>
+			<view class="collect">
+				<text>{{item.bookCount}}本</text>
+				<text> | </text>
+				<text>{{item.collectorCount}}收藏</text>
+			</view>
+			<view class="assess">
+				{{item.desc}}
+			</view>
+		</view>
+		
+		<view class="picture">
+		
+			<image wx:for="{{item.covers}}" wx:key="*this" wx:for-index="index1" wx:for-item="item1"  src="{{item1}}"></image>
+	
+		</view>
+		</view>
+		</scroll-view>
+		
+		<scroll-view class="scroll" wx:if="{{showSelect}}" scroll-y="true" scroll-with-animation="true" style='height:{{winHeight}}rpx;'  scroll-with-animation="true">
+			<view class="select-box" wx:for="{{navList03}}" wx:key="*this" wx:for-index="index" wx:for-item="item">
+				<view class="title">{{item.title}}</view>
+				
+				<view class="selects">
+					<view class="sels {{selsActiveIndex == item1?'redActive':''}}" wx:for="{{item.childs}}" data-name="{{item1}}"  bindtap="choice03"   wx:key="*this" wx:for-index="index1"  wx:for-item="item1">{{item1}}</view>
+				</view>
+			</view>
+			
+			
+		</scroll-view>
+		
+		<view wx-if="{{hidden}}" class="hiddenTxt">没有你要找的内容哦</view>
+	
+</view>

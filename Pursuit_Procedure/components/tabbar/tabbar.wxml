@@ -1,0 +1,6 @@
+<view class="comp-tabbar" style="border-color:{{tabbar.borderStyle}};background-color:{{tabbar.backgroundColor}}">
+  <view bindtap="redirectTo" data-taburl="{{item.pagePath}}" wx:for="{{tabbar.list}}" wx:key="index" class="tabbarItem" style="color:{{curRoute==item.pagePath?tabbar.selectedColor:tabbar.color}}">
+    <image class="icon" src="{{curRoute==item.pagePath?item.selectedIconPath:item.iconPath}}" mode="aspectFit"></image>
+    <view>{{item.text}}</view>
+  </view>
+</view>

@@ -1,0 +1,246 @@
+.content {
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.content .part-one {
+  width: 100%;
+  overflow: hidden;
+}
+.content .part-one .image-left-box {
+  width: 28%;
+  float: left;
+}
+.content .part-one .image-left-box image {
+  box-shadow: darkgrey 0 0 3px 1px;
+  width: 192rpx;
+  height: 261rpx;
+}
+.content .part-one .text {
+  box-sizing: border-box;
+  padding: 0 0 0 0.5rem;
+  float: right;
+  width: 72%;
+}
+.content .part-one .text .title {
+  font-weight: bolder;
+}
+.content .part-one .text .pingfen {
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+.content .part-one .text .pingfen .mark {
+  font-size: 50rpx;
+  float: left;
+  color: #FEC02F;
+  margin-right: 0.5rem;
+}
+.content .part-one .text .pingfen .stars {
+  float: left;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+.content .part-one .text .pingfen .stars .star-box {
+  overflow: hidden;
+}
+.content .part-one .text .pingfen .stars .star-box .star {
+  float: left;
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 5rpx;
+  background-size: 100% 100%;
+}
+.content .part-one .text .pingfen .line {
+  color: #C8C7CC;
+  float: left;
+  font-size: 30rpx;
+  margin-top: 0.4rem;
+  margin-right: 0.5rem;
+}
+.content .part-one .text .pingfen .evaluation {
+  color: #C8C7CC;
+  float: left;
+  font-size: 30rpx;
+  margin-top: 0.5rem;
+}
+.content .part-one .text .tag-box {
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+.content .part-one .text .tag-box .author {
+  float: left;
+  margin-right: 0.5rem;
+  font-size: 30rpx;
+  color: #E77878;
+}
+.content .part-one .text .tag-box .line {
+  color: #C8C7CC;
+  float: left;
+  margin-right: 0.5rem;
+  font-size: 30rpx;
+}
+.content .part-one .text .tag-box .tag {
+  color: #C8C7CC;
+  float: left;
+  font-size: 30rpx;
+}
+.content .part-one .text .font-sum {
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+.content .part-one .text .font-sum .font-count {
+  float: left;
+  margin-right: 0.5rem;
+  font-size: 30rpx;
+  color: #C8C7CC;
+}
+.content .part-one .text .font-sum .line {
+  color: #C8C7CC;
+  float: left;
+  margin-right: 0.5rem;
+  font-size: 30rpx;
+}
+.content .part-one .text .font-sum .tag {
+  color: #C8C7CC;
+  float: left;
+  font-size: 30rpx;
+}
+.content .part-one .part-box-bottom {
+  overflow: hidden;
+  width: 100%;
+  padding: 0.5rem 0 1.5rem;
+}
+.content .part-one .part-box-bottom .renqi {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+.content .part-one .part-box-bottom .renqi view:nth-of-type(1) {
+  font-weight: bolder;
+  color: #8B939D;
+  margin-bottom: 0.1rem;
+  font-size: 35rpx;
+}
+.content .part-one .part-box-bottom .renqi view:nth-of-type(2) {
+  font-size: 25rpx;
+  color: #D3D2D5;
+}
+.content .part-two {
+  margin-bottom: 1.5rem;
+}
+.content .part-two .header-box {
+  overflow: hidden;
+  width: 100%;
+}
+.content .part-two .header-box text:nth-of-type(1) {
+  float: left;
+  font-weight: bolder;
+}
+.content .part-two .header-box text:nth-of-type(2) {
+  float: right;
+  margin-top: 0.4rem;
+  font-size: 25rpx;
+  color: #D3D2D5;
+}
+.content .part-two .content {
+  width: 100%;
+  word-wrap: break-word;
+  font-size: 30rpx;
+}
+.content .part-three {
+  margin-bottom: 4rem;
+}
+.content .part-three .shiping {
+  font-weight: bolder;
+}
+.content .part-three .evaluate {
+  margin-top: 1rem;
+}
+.content .part-three .evaluate .title {
+  font-size: 35rpx;
+}
+.content .part-three .evaluate .content {
+  word-wrap: break-word;
+  word-break: normal;
+  font-size: 32rpx;
+  color: #9D9CA0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.content .part-three .evaluate .author-box {
+  margin-top: 1rem;
+  width: 100%;
+  overflow: hidden;
+}
+.content .part-three .evaluate .author-box .image-box {
+  width: 8%;
+  float: left;
+}
+.content .part-three .evaluate .author-box .image-box image {
+  margin-top: 0.2rem;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.content .part-three .evaluate .author-box .info-box {
+  float: left;
+}
+.content .part-three .evaluate .author-box .info-box view:nth-of-type(1) {
+  font-size: 25rpx;
+  color: #8B8B8B;
+}
+.content .part-three .evaluate .author-box .info-box view:nth-of-type(2) {
+  font-size: 25rpx;
+  color: #D5D5D5;
+}
+.content .part-three .evaluate .author-box .star-box {
+  float: right;
+  margin-top: 0.1rem;
+}
+.content .part-three .evaluate .author-box .star-box .star-box {
+  width: 100%;
+  overflow: hidden;
+}
+.content .part-three .evaluate .author-box .star-box .star-box .star {
+  float: left;
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 8rpx;
+  background-size: 100% 100%;
+}
+.content .part-three .evaluate .author-box .star-box .ren {
+  font-size: 25rpx;
+  color: #D5D5D5;
+}
+.part-four {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100%;
+  height: 3rem;
+  overflow: hidden;
+  text-align: center;
+  border-top: 1px solid #EBEBEB;
+}
+.part-four .btn1 {
+  float: left;
+  width: 40%;
+  height: 70% ;
+  margin-top: 18rpx;
+  margin-left: 50rpx;
+  background-color: #EF4746;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.part-four .btn1::after {
+  border-radius: 98rpx;
+  border: 0;
+}

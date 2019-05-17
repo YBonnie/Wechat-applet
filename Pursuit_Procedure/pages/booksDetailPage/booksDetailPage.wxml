@@ -1,0 +1,106 @@
+
+<view>
+    <loading wx:if="{{hidden}}">
+        加载中...
+    </loading>
+</view>
+
+<scroll-view wx:if="{{booksListShow}}" scroll-y enable-back-to-top="true" class="content animated fadeInUp">
+	<view class="part-one">
+		<view class="image-left-box">
+			<image class="auto-img" src="{{currentBooksInfo.cover}}"></image>
+		</view>
+		<view class="text">
+			<view class="title">{{currentBooksInfo.title}}</view>
+			<view class="pingfen">
+				<view class="mark">{{currentBooksInfo.rating.score}}</view>
+				<view class="stars">
+					<view class="star-box">
+						<view class="star" wx:for="{{stars}}" wx:key="" style='background:url("{{item.flag==1?item.bgImg:item.bgfImg}}") no-repeat top; background-size:100%;'></view>
+					</view>
+				</view>
+				<view class="line">|</view>
+				<view class="evaluation">{{currentBooksInfo.postCount}}人评</view>
+			</view>
+			<view class="tag-box">
+				<view class="author">{{currentBooksInfo.author}}</view>
+				<view class="line">|</view>
+				<view class="tag">{{currentBooksInfo.majorCate}}</view>
+			</view>
+			<view class="font-sum">
+				<view class="font-count">{{currentBooksInfo.wordCount}}万字</view>
+				<view class="line">|</view>
+				<view class="tag">更新{{currentBooksInfo.updated}}</view>
+			</view>
+		</view>
+
+		<view class="part-box-bottom">
+			<view class="renqi">
+				<view>{{currentBooksInfo.latelyFollower}}</view>
+				<view>追书人气</view>
+			</view>
+
+			<view class="renqi">
+				<view>{{currentBooksInfo.retentionRatio}}%</view>
+				<view>读者留存</view>
+			</view>
+
+			<view class="renqi">
+				<view>{{currentBooksInfo.postCount}}</view>
+				<view>日更字数</view>
+			</view>
+		</view>
+
+	</view>
+	<!--折叠功能的简介-->
+	<view class="part-two">
+		<view class="header-box">
+			<text>简介</text>
+			<text bindtap="clickShow" class="iconfont {{showView?'icon-xiangshang':'icon-xiangxia'}}"></text>
+		</view>
+		<view class="content" wx:if="{{showView}}">{{currentBooksInfo.longIntro}}</view>
+	</view>
+
+	<!--热门书评-->
+	<view class="part-three">
+		<view class="shiping">热门书评</view>
+
+		<view class="evaluate" wx:for="{{evaluateList}}" wx:for-index="index" wx:for-item="item">
+			<view class="title">{{item.title}}</view>
+			<view class="content">
+				{{item.content}}
+			</view>
+			<view class="author-box">
+				<view class="image-box">
+					<image src="{{item.author.avatar}}"></image>
+				</view>
+
+				<view class="info-box">
+					<view>{{item.author.nickname}}</view>
+					<view>{{item.updated}}</view>
+				</view>
+
+				<view class="star-box">
+
+					<view class="star-box">
+						<view class="star" wx:for="{{starss}}" wx:key="" style='background:url("{{item.flag==1?item.bgImg:item.bgfImg}}") no-repeat top; background-size:100%;'></view>
+					</view>
+
+					<view class="ren">{{item.commentCount}}人觉得有用</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+</scroll-view>
+
+<view class="part-four">
+	<button class='btn1' open-type='openSetting' bindtap="addBookshelf" data-item="{{currentBooksInfo}}">
+    <view>加入书架</view>
+ </button>
+
+<button class='btn1' open-type='openSetting' data-title="{{currentBooksInfo.title}}" data-bookid="{{currentBooksInfo._id}}" data-item="{{currentBooksInfo}}" bindtap="startRead">
+  
+    <view>开始阅读</view>
+ </button>
+</view>

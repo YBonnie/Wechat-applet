@@ -1,0 +1,73 @@
+<!--下导航-->
+<comp-tabbar />
+
+
+<!-- 搜索框 -->
+<view class='search_box '>
+	<view class="search">
+		<icon class="searchcion" size='15' color="#000" type='search'></icon>
+		<input class="searchInput" bindfocus="searchPage"  placeholder="请输入书名" value="{{searchValue}}" />
+	</view>
+</view>
+
+<!-- 轮播 -->
+<view class="page-section page-section-spacing swiper swiper-banner">
+	<!-- 指示点 -->
+	<swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="#D81E06" autoplay="true">
+		<block wx:for="{{imageBanner}}" wx:key="*this">
+			<swiper-item>
+				<image src='{{item}}' class='auto-img'></image>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+
+<!-- 导航nav -->
+<view class='nav'>
+	<view class='nav-box' wx:for="{{navList}}" wx:key="*this" bindtap="goPath" data-url="{{item.path}}">
+		<view class='iconBox' style="background-color:{{item.bgColor}};">
+			<image src='{{item.imageUrl}}' class='auto-img'></image>
+		</view>
+		<view class='text'>{{item.title}}</view>
+	</view>
+</view>
+
+<!-- 精选 -->
+<view class="choic">
+
+	<view wx:for="{{listArr}}" wx:key="*this" wx:for-index="index" wx:for-item="item">
+		
+		<view class="choic-nav"  >
+			<view class="title">{{item.name}}</view>
+			<view class="more" bindtap="checkMore"  data-name="{{item.name}}">查看更多<text class="iconfont icon_turnRight"></text></view>
+		</view>
+
+		<!--精选的内容-->
+		<view class="articleList" bindtap="toBooksDetail" data-bookname="{{item1.title}}" data-bookid="{{item1._id}}" wx:for="{{item.books}}" wx:for-index="index1" wx:for-item="item1">
+			<view class="list-box">
+				<view class="image-box">
+					<image src="{{item1.cover}}"></image>
+				</view>
+				<view class="text">
+					<view class="title">{{item1.title}}</view>
+					<view class="content">{{item1.shortIntro}}</view>
+
+					<view class="detail">
+						<view class="tip">
+							<text class="iconfont icon-wo"></text>
+							<text>{{item1.author}}</text>
+							<text>{{item1.latelyFollower}}人气</text>
+						</view>
+						<view class="tag">
+							<!--<text>科幻</text>-->
+						<!--<text>完结</text>-->
+							<text>{{item1.retentionRatio}}%保留</text>
+						</view>
+					</view>
+				</view>
+			</view>
+
+		</view>
+	</view>
+</view>
+

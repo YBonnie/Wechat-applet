@@ -1,0 +1,117 @@
+.content {
+    padding: 0.5rem 0.5rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    .part-one {
+        //      background-color: #F1F1F1;
+        overflow: hidden;
+        width: 100%;
+        .image-box {
+            width: 8%;
+            float: left;
+            image {
+                margin-top: 0.2rem;
+                width: 50rpx;
+                height: 50rpx;
+                border-radius: 50%;
+            }
+        }
+        .name-box {
+            float: left;
+
+            font-size: 25rpx;
+            margin-left: 15rpx;
+            view:nth-of-type(1) {
+                color: #6C6C6C;
+
+            }
+            view:nth-of-type(2) {
+                color: #A7A7A7;
+                margin-top: 5rpx;
+            }
+        }
+        .level-box {
+            color: #6C6C6C;
+            float: left;
+            margin-left: 15rpx;
+            font-size: 22rpx;
+            padding: 5rpx 20rpx;
+            border: 1px solid #E8E8E8;
+            border-radius: 20rpx;
+        }
+        .share-box{
+            float: right;
+            font-size: 30rpx;
+            background-color: #EF4746;
+            border-radius:20rpx ;
+             width: 150rpx;
+             height: 50rpx;
+             line-height: 50rpx;
+              color: #ffffff;
+              margin-top: 15rpx;
+        }
+    }
+    
+    .part-two{
+        margin-top: 30rpx;
+        width: 60%;
+        font-size: 35rpx;
+    }
+    .part-three{
+         margin-top: 35rpx;
+         color: #8B8B8D;
+         font-size: 30rpx;
+    }
+    .part-four{
+
+        clear: both;
+        .box{
+            margin-top: 35rpx;
+          
+            .box-one{
+                overflow: hidden;
+                width: 100%;
+                .image-box{
+                    float: left;
+                    image{
+                        width: 120rpx;
+                        height: 170rpx;
+                    }
+                }
+                .txt{
+                    float: left;
+                    margin-left: 25rpx;
+                    .title{
+                        font-size: 30rpx;
+                        color: #333333;
+                        font-weight: bolder;
+                    }
+                    .author{
+                        margin-top: 15rpx;
+                        font-size: 28rpx;
+                        color: #CACACA;
+                        text{
+                             font-size: 28rpx;
+                            color: #ADADAD;
+                        }
+                    }
+                    .renqi{
+                         margin-top: 15rpx;
+                         color: #9A9BA1;
+                         font-size: 28rpx;
+                         text:nth-of-type(2){
+                             margin-left: 25rpx;
+                         }
+                    }
+                }
+            }
+            
+            .box-two{
+               margin-top: 10rpx;
+               color: #68676B;
+               font-size: 25rpx;
+            }
+        }
+    }
+}

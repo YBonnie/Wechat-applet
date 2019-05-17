@@ -1,0 +1,65 @@
+
+<comp-tabbar />
+<view class="content animated fadeInUp">
+	<view class="part-one">
+		<view class="image-box">
+			<image src="{{userInfo.avatarUrl}}"></image>
+		</view>
+		<view class="txt">
+			<view class="name">{{userInfo.nickName}}</view>
+			<view class="id">ID:ncjsdbvjdsnbvdlsnvkdlsnv <text>（点击复制Id）</text></view>
+		</view>
+	</view>
+	<view class="part-two">
+		<view class="list-box">
+			<view class="image-box">
+				<image src="../../Chasing_books_picture/mine_01.png"></image>
+			</view>
+			<view class="txt">
+				<view class="title">追书币</view>
+				<view>0枚</view>
+			</view>
+			<view class="btn">充值</view>
+		</view>
+		
+		<view class="list-box">
+			<view class="image-box">
+				<image src="../../Chasing_books_picture/mine_02.png"></image>
+			</view>
+			<view class="txt">
+				<view class="title">追书券</view>
+				<view>0张</view>
+			</view>
+			<view class="turnRight">
+				<image src="../../Chasing_books_picture/right.png"> </image>
+			</view>
+		</view>
+		
+		<view class="list-box">
+			<view class="image-box">
+				<image src="../../Chasing_books_picture/mine_03.png"></image>
+			</view>
+			<view class="txt">
+				<view class="title1">我的VIP</view>
+				
+			</view>
+			<view class="btn">开通</view>
+		</view>
+		
+		
+		
+		<view class="list-box" wx:for="{{listNav}}" wx:key="*this">
+			<view class="image-box">
+				<image src="{{item.imageurl}}"></image>
+			</view>
+			<view class="txt">
+				<view class="title1">{{item.title}}</view>
+				
+			</view>
+			<view class="turnRight">
+				<image src="../../Chasing_books_picture/right.png"> </image>
+			</view>
+		</view>
+		
+	</view>
+</view>

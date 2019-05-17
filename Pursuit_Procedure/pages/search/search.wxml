@@ -1,0 +1,51 @@
+<!--加载动画-->
+
+<!--查询框-->
+<view class='search_box'>
+	<view class="search">
+		<icon class="searchcion" size='15' color="#000" type='search'></icon>
+		<input class="searchInput" bindinput="searchInputValue" bindconfirm="getHistoryVaule" focus placeholder="请输入查询关键字"  />
+	</view>
+</view>
+
+<!--搜索历史-->
+	<view class="histroy">
+		
+		<view wx:if="{{showView}}">
+		<view class="title">
+			<view class="text">搜索热词</view>
+			<view class="delect">换一批  <text class="iconfont icon-huanyipi" bindtap="getNextSearchHotWords"></text></view>
+		</view>
+		<view class="content" >
+			<view class="histroyList" bindtap="goSearchResultPage" data-title="{{item.word}}" wx:for="{{hotValue}}" wx:for-index="index" wx:for-item="item">{{item.word}}</view>
+		</view>
+		
+		<view class="title">
+			<view class="text">热门推荐</view>
+			<view class="delect">换一批  <text class="iconfont icon-huanyipi" bindtap="getNextSearchHotWords"></text></view>
+		</view>
+		<view class="content" >
+			<view class="histroyList" bindtap="goSearchResultPage" data-title="{{item.word}}" wx:for="{{newHotWords}}" wx:for-index="index" wx:for-item="item">{{item.word}}</view>
+		</view>
+		
+		<view class="title">
+			<view class="text">搜索历史</view>
+			<view class="delect">删除历史  <text class="iconfont icon-shanchu" bindtap="delectHistorySearchValue"></text></view>
+		</view>
+		<view class="content">
+			<view class="histroyList" bindtap="goSearchResultPage" data-title="{{item}}" wx:for="{{historyValue}}" wx:for-index="index" wx:for-item="item">{{item}}</view>
+		</view>
+		</view>
+		
+		
+		
+		<view class="searchList" wx:if="{{showSearchValueList}}">
+			<view class="lists" wx:for="{{searchResult}}" wx:for-index="index" wx:for-item="item" bindtap="goSearchResultPage" data-title="{{item.title}}">
+				<text class="iconfont icon-shuji"></text>
+				<text class="book-name">{{item.title}}</text>
+			</view>
+			
+		</view>
+		
+		
+	</view>

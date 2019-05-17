@@ -1,0 +1,34 @@
+<view class="content animated fadeInUp">
+	<view class="ce-nav">
+		<scroll-view scroll-y="true" style='height:100%;' class="scroll-box" scroll-with-animation>
+			<view class="simple" wx:for="{{choiceGenderList}}" wx:key="*this">
+				<text class="{{isActiveIndex == index?'simpleActive':''}}" bindtap="clickActive" data-id="list{{index}}" data-index="{{index}}">{{item}}</text>
+			</view>
+		</scroll-view>
+	</view>
+
+	
+		<scroll-view scroll-y="true" bindscroll="scroll" class="content" scroll-with-animation="true" scroll-into-view="{{isActiveId}}" scroll-left="{{scrollLength}}" style='height:{{winHeight}}rpx;'>
+			<view class="box" wx:for="{{bookListArr}}" wx:for-index="index" wx:for-item="item">
+				<view class="line" id="list{{index}}">★{{item.name}}★</view>
+				<view class="list-box">
+
+					<view class="list-content" wx:for="{{item.arr}}" wx:for-index="index1" wx:for-item="item1" bindtap="goPath" data-gender="{{item.gender}}" data-name="{{item1.name}}">
+						<view class="txt">
+							<view class="title">{{item1.name}}</view>
+							<view class="num-txt">{{item1.bookCount}}本</view>
+						</view>
+
+						<view class="image">
+							<view>
+								<image wx:for="{{item1.bookCover}}" wx:for-index="index2" wx:for-item="item2" src="{{item2}}"></image>
+
+							</view>
+						</view>
+					</view>
+
+				</view>
+			</view>
+		</scroll-view>
+	
+</view>

@@ -1,0 +1,24 @@
+<view class="content animated fadeInUp">
+	<view class="nav-one">
+		<view wx:for="{{navList01}}" bindtap="choice01" data-index="{{index}}" wx:key="*this" class="{{index == activeIndex01 ? 'navActiveOne' : ''}}">{{item}}</view>
+	</view>
+	<view class="nav-two">
+		<view wx:for="{{navList02}}" bindtap="choice02" data-index="{{index}}" data-item="{{item}}" wx:key="*this" class="{{index == activeIndex02 ? 'navActiveOne' : ''}}">{{item}}</view>
+	</view>
+	
+	<view class="article-box">
+		<scroll-view scroll-y="true" style='height: {{winHeight}}px' class="scroll-box" scroll-with-animation   >
+			<view class="list-box" wx:for="{{booksList}}" wx:for-index="index" wx:for-item="item" wx:key="*this" bindtap="toBooksDetail" data-bookname="{{item.title}}" data-bookid="{{item._id}}" >
+				<view class="image-box">
+					<image class="auto-img"  src="{{item.cover}}"></image>
+				</view>
+				<view class="list-txt">
+					<view>{{item.title}}</view>
+					<view>{{item.shortIntro}}</view>
+					<view><text>{{item.latelyFollower}}万</text>人气  <text>{{item.retentionRatio}}%</text>留存</view>
+				</view>
+			</view>
+			
+		</scroll-view>
+	</view>
+</view>

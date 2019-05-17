@@ -1,0 +1,23 @@
+<view>
+    <loading wx:if="{{hidden}}">
+        加载中...
+    </loading>
+</view>
+
+<view class="content animated fadeInUp" wx:if="{{booksListShow}}">
+	<view class="title">
+		<view class="txt">目录（共{{length}}章）</view>
+		<view class="searchTxt"><input type="text" placeholder="请输入章数" /></view>
+	</view>
+	
+	<!--列表-->
+	<scroll-view bindscroll="scroll" style="height:{{clientHeight}}px;" class="list-box" scroll-y="true" enable-back-to-top="true">
+		<view class="lists" wx:for="{{catalog}}" wx:key="*this" bindtap="startRead" data-bookid="{{bookid}}" data-title="{{title}}" data-index="{{index}}">
+			<text>{{index + 1}}</text>
+			<text>{{item.title}}</text>
+			<text>下载</text>
+		</view>
+		
+	</scroll-view>
+
+</view>

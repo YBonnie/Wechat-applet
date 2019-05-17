@@ -1,0 +1,7 @@
+{
+"navigationBarTitleText": "追书神器",
+
+  "usingComponents": {
+  		 "comp-tabbar":"../../components/tabbar/tabbar"
+  }
+}

@@ -1,0 +1,39 @@
+<view>
+    <loading wx:if="{{hidden}}">
+        加载中...
+    </loading>
+</view>
+
+
+<view class="content animated fadeInUp" wx:if="{{booksListShow}}">
+	<view class="heng-nav">
+		<view class="male"><text bindtap="changeActive" data-gender="{{'male'}}" class="{{maleActive? 'text' : ''}}">男频</text></view>
+		<view class="female"><text bindtap="changeActive" data-gender="{{'female'}}" class="{{femaleActive? 'text' : ''}}">女频</text></view>
+	</view>
+	
+	<view class="ce-nav">
+		<scroll-view scroll-y="true" style='height:100%;' class="scroll-box" scroll-with-animation scroll-left="{{scrollLength}}"  style='height: {{winHeight}}px'>
+			<view class="simple" wx:for="{{choiceGenderList}}"  wx:key="*this">
+				<text class="{{isActiveIndex == index?'simpleActive':''}}" bindtap="clickActive" data-listid="{{item._id}}" data-index="{{index}}">{{item.shortTitle}}</text>
+			</view>
+			
+		</scroll-view>
+	</view>
+	
+	<view class="article-box">
+		<scroll-view scroll-y="true" style='height:100%;' class="scroll-box" scroll-with-animation scroll-left="{{scrollLength}}"  style='height: {{winHeight}}px'>
+			<view class="list-box" wx:for="{{booksList}}" wx:key="*this" bindtap="toBooksDetail" data-bookname="{{item.title}}" data-bookid="{{item._id}}">
+				<view class="image-box">
+					<image class="auto-img"  src="{{item.cover}}"></image>
+				</view>
+				<view class="list-txt">
+					<view>{{item.title}}</view>
+					<view>{{item.shortIntro}}</view>
+					<view><text>{{item.latelyFollower}}万</text>人气  <text>{{item.retentionRatio}}%</text>留存</view>
+				</view>
+			</view>
+			
+		</scroll-view>
+	</view>
+</view>
+

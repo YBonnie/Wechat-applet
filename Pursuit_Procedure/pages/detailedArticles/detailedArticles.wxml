@@ -1,0 +1,33 @@
+<view>
+    <loading wx:if="{{hidden}}">
+        加载中...
+    </loading>
+</view>
+
+
+<!--body-->
+<view class="content animated fadeInUp" wx:if="{{booksListShow}}">
+	<!--标题-->
+	<view>
+		<view class="title">
+			<text>{{articleContent.title}}</text>
+		</view>
+		<text class="article-content">
+			{{articleContent.cpContent}}
+		</text>
+
+		<view class="btn-box">
+			<button class='btn1' open-type='openSetting' bindtap="prevArticle">
+		   		 <view>上一章</view>
+			</button>
+			<button class='btn1' open-type='openSetting' bindtap="nextArticle">
+		    	<view>下一章</view>
+			</button>
+			
+			<button class='btn2' open-type='openSetting' bindtap="catalog">
+		        <view>目录</view>
+			</button>
+		</view>
+
+	</view>
+</view>

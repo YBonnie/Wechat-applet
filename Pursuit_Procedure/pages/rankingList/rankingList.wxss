@@ -1,0 +1,117 @@
+.content {
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.content .heng-nav {
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+.content .heng-nav .female,
+.content .heng-nav .male {
+  box-sizing: border-box;
+  width: 50%;
+  text-align: center;
+  border-bottom: 1px solid #999999;
+  padding: 0 0 30rpx;
+  float: left;
+}
+.content .heng-nav .female text,
+.content .heng-nav .male text {
+  font-size: 35rpx;
+  padding-bottom: 32rpx;
+}
+.content .heng-nav .female .text,
+.content .heng-nav .male .text {
+  font-size: 35rpx;
+  border-bottom: 1px solid #F15F5D;
+  color: #F15F5D;
+  padding-bottom: 32rpx;
+}
+.content .ce-nav {
+  float: left;
+  width: 25%;
+}
+.content .ce-nav .scroll-box {
+  width: 100%;
+  border-right: 1px solid #F0F0F0;
+  box-sizing: border-box;
+}
+.content .ce-nav .scroll-box .simple {
+  box-sizing: border-box;
+  border-bottom: 1px solid #F0F0F0;
+  padding: 35rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bolder;
+}
+.content .ce-nav .scroll-box .simple text {
+  display: block;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.content .ce-nav .scroll-box .simpleActive {
+  border-left: 1px solid #F15F5D;
+  color: #F15F5D;
+}
+.content .article-box {
+  float: right;
+  width: 75%;
+}
+.content .article-box .scroll-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25rpx;
+}
+.content .article-box .scroll-box .list-box {
+  margin-bottom: 35rpx;
+  width: 100%;
+  overflow: hidden;
+}
+.content .article-box .scroll-box .list-box .image-box {
+  float: left;
+  width: 30%;
+  height: 200rpx;
+}
+.content .article-box .scroll-box .list-box .image-box image {
+  box-shadow: darkgrey 0 0 3px 1px;
+  width: 100%;
+  height: 100%;
+}
+.content .article-box .scroll-box .list-box .list-txt {
+  float: right;
+  width: 70%;
+  box-sizing: border-box;
+  padding-left: 25rpx;
+}
+.content .article-box .scroll-box .list-box .list-txt view:nth-of-type(1) {
+  font-size: 33rpx;
+  font-weight: bolder;
+}
+.content .article-box .scroll-box .list-box .list-txt view:nth-of-type(2) {
+  margin-top: 20rpx;
+  font-size: 25rpx;
+  color: #8A8A8A;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.content .article-box .scroll-box .list-box .list-txt view:nth-of-type(3) {
+  margin-top: 20rpx;
+  font-size: 25rpx;
+}
+.content .article-box .scroll-box .list-box .list-txt view:nth-of-type(3) text:nth-of-type(1) {
+  color: #BE4A4C;
+  margin-right: 15rpx;
+}
+.content .article-box .scroll-box .list-box .list-txt view:nth-of-type(3) text:nth-of-type(2) {
+  margin-left: 30rpx;
+  color: #BE4A4C;
+  margin-right: 15rpx;
+}

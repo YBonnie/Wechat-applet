@@ -1,0 +1,74 @@
+<view class="content animated fadeInUp">
+	<view class="part-one">
+		<!--gender的选择-->
+		<view class="gender-box">
+			<text class="gender {{isActive1 ?'genderActive':''}}" bindtap="changeActive" data-gender="male">男</text>
+			<text class="gender {{isActive2?'genderActive':''}}" bindtap="changeActive" data-gender="female">女</text>
+		</view>
+
+		<!--查询框-->
+		<view class='search_box'>
+			<view class="search" bindtap="goPath">
+				<icon class="searchcion" size='15' color="#000" type='search'></icon>
+				<input class="searchInput" bindfocus="searchPage" placeholder="请输入书名" value="{{searchValue}}" />
+			</view>
+		</view>
+	</view>
+	
+	<view class="part-two">
+
+		<view class="image-box">
+			 <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+		</view>
+		<view class="nickname">
+			<view><text class="userinfo-nickname">{{userInfo.nickName}}</text></view>
+			<view><text class="viptext">开通VIP，享受畅读特权</text></view>
+		</view>
+		
+		<view class="openVIP">
+			<button>立即开通</button>
+		</view>
+	</view>
+	
+	<view class="part-three">
+		<!-- 精选 -->
+<view class="choic">
+
+	<view wx:for="{{booksList}}" wx:for-index="index" wx:for-item="item">
+		
+		<view class="choic-nav"  >
+			<view class="title">{{item.name}}</view>
+			<view class="more" bindtap="checkMore" data-name="{{item.name}}">查看更多<text class="iconfont icon_turnRight"></text></view>
+		</view>
+
+		<!--精选的内容-->
+		<view class="articleList" >
+			<view class="list-box" wx:for="{{item.books}}" bindtap="toBooksDetail" data-bookname="{{item1.title}}" data-bookid="{{item1._id}}" wx:for-index="index1" wx:for-item="item1"  >
+				<view class="image-box">
+					<image src="{{item1.cover}}"></image>
+				</view>
+				<view class="text">
+					<view class="title">{{item1.title}}</view>
+					<view class="content">{{item1.shortIntro}}</view>
+
+					<view class="detail">
+						<view class="tip">
+							<text class="iconfont icon-wo"></text>
+							<text>{{item1.author}}</text>
+							<text>{{item1.latelyFollower}}人气</text>
+						</view>
+						<view class="tag">
+							<text>{{item1.majorCate}}</text>
+						<text>{{item1.minorCate}}</text>
+							<!--<text>9.1分</text>-->
+						</view>
+					</view>
+				</view>
+			</view>
+
+		</view>
+	</view>
+</view>
+	</view>
+
+</view>

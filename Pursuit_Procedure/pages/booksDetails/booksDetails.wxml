@@ -1,0 +1,52 @@
+
+<view>
+    <loading wx:if="{{hidden}}">
+        加载中...
+    </loading>
+</view>
+
+
+<view class="content animated fadeInUp" wx:if="{{booksListShow}}">
+	<block>
+		<view class="part-one">
+			<view class="image-box">
+				<image src="{{bookList.author.avatar}}"></image>
+			</view>
+			<view class="name-box">
+				<view>{{bookList.author.nickname}}</view>
+				<view>{{bookList.updated}}</view>
+			</view>
+			<view class="level-box">Lv{{bookList.author.lv}}</view>
+			<button class="share-box" open-type="share">分享</button>
+		</view>
+		<view class="part-two">
+			{{bookList.title}}
+		</view>
+		<view class="part-three">
+			{{bookList.desc}}
+		</view>
+		
+		<view class="part-four">
+			<view class="box" bindtap="toBooksDetail" data-bookname="{{item.book.title}}" data-bookid="{{item.book._id}}" wx:for="{{bookList.books}}" wx:key="*this" wx:for-index="index" wx:for-item="item">
+				<view class="box-one">
+					<view class="image-box">
+						<image src="{{item.book.cover}}"></image>
+					</view>
+					<view class="txt">
+						<view class="title">{{item.book.title}}</view>
+						<view class="author"><text class="iconfont icon-wo"></text>  {{item.book.author}}</view>
+						<view class="renqi">
+							<text>{{item.book.latelyFollower}}人气</text>
+							<text>{{item.book.majorCate}}</text>
+						</view>
+						
+					</view>
+					
+				</view>
+				<view class="box-two">
+					{{item.comment}}
+				</view>
+			</view>
+		</view>
+	</block>
+</view>

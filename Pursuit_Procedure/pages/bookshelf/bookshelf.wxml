@@ -1,0 +1,54 @@
+<comp-tabbar/>
+<view class="content animated fadeInUp">
+	<view class="nav">
+		<view wx:for="{{navList}}" wx:key="*this" ><text class="{{navValue == item ? 'activeTxt':''}}" bindtap="changePage" data-item="{{item}}">{{item}}</text></view>
+	</view>
+	
+	<view class="bookList" wx:if="{{hidden}}">
+		<view class="count">共0本</view>
+		<view class="noBooks">你没有收藏的书目</view>
+		<button class="btn" bindtap="goPath">去书城逛逛</button>
+	</view>
+	
+	<view class="showbookList" wx:if="{{navPageShow}}" >
+		<view class="count">共{{length}}本</view>
+		<view class="list-box" wx:for="{{collectSource}}" wx:key="*this">
+			<view class="image-box">
+				<image src="{{item.cover}}"></image>
+			</view>
+			<view class="txt-box">
+				<view class="title">{{item.title}}</view>
+				<view class="author"><text class="iconfont icon-wo"></text>{{item.author}}</view>
+				<view class="renqi"><text>{{item.latelyFollower}}人气</text><text>{{item.majorCate}}</text></view>
+			</view>
+			<view class="iconRight" bindtap="toBooksDetail" data-bookname="{{item.title}}" data-bookid="{{item._id}}">
+				<image class="shu" src="../../Chasing_books_picture/shu.png"></image>
+			</view>
+		</view>
+	</view>
+	
+	<view class="bookList" wx:if="{{hidden1}}">
+		<view class="count">共0本</view>
+		<view class="noBooks">你最近没有查看的书目</view>
+		<button class="btn" bindtap="goPath">去书城逛逛</button>
+	</view>
+	
+	<view class="showbookList" wx:if="{{recentShow}}">
+		
+		<view class="count">共{{length1}}本</view>
+		<view class="list-box" wx:for="{{recentReadSource}}" wx:key="*this">
+			<view class="image-box" bindtap="toBooksDetail" data-bookname="{{item.title}}" data-bookid="{{item._id}}">
+				<image src="{{item.cover}}"></image>
+			</view>
+			<view class="txt-box">
+				<view class="title">{{item.title}}</view>
+				<view class="author"><text class="iconfont icon-wo"></text>{{item.author}}</view>
+				<view class="renqi"><text>{{item.latelyFollower}}人气</text><text>{{item.majorCate}}</text></view>
+			</view>
+			<view class="iconRight" bindtap="delectBooks" data-id="{{item._id}}">
+				<image class="shu" src="../../Chasing_books_picture/delect.png"></image>
+			</view>
+		</view>
+	</view>
+	
+</view>

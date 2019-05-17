@@ -1,0 +1,30 @@
+{
+	"pages": [
+		
+		
+		"pages/index/index",
+		"pages/bookshelf/bookshelf",
+		"pages/mine/mine",
+		"pages/booksDetails/booksDetails",
+		"pages/bookLists/bookLists",
+		"pages/classifiedPage/classifiedPage",	
+		"pages/classification/classification",
+		"pages/VIP/VIP",
+		"pages/VIPcheckMore/VIPcheckMore",
+		"pages/checkMore/checkMore",
+		"pages/rankingList/rankingList",
+		"pages/booksDetailPage/booksDetailPage",
+		"pages/detailedArticles/detailedArticles",
+		"pages/catalog/catalog",
+		"pages/search/search",
+		"pages/searchPage/searchPage",
+		"pages/my/my"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "追书神器",
+		"navigationBarTextStyle": "black",
+		"enablePullDownRefresh": true
+	}
+}

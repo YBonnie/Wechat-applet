@@ -1,0 +1,131 @@
+.content {
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.content .ce-nav {
+  float: left;
+  width: 15%;
+}
+.content .ce-nav .scroll-box {
+  width: 100%;
+  border-right: 1px solid #F0F0F0;
+  box-sizing: border-box;
+}
+.content .ce-nav .scroll-box .simple {
+  box-sizing: border-box;
+  border-bottom: 1px solid #F0F0F0;
+  padding: 35rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bolder;
+}
+.content .ce-nav .scroll-box .simple text {
+  display: block;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.content .ce-nav .scroll-box .simpleActive {
+  border-left: 1px solid #F15F5D;
+  color: #F15F5D;
+}
+.content .content {
+  float: right;
+  width: 85%;
+}
+.content .content .box {
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 35rpx;
+}
+.content .content .box .line {
+  position: relative;
+  text-align: center;
+  font-size: 30rpx;
+  color: #C8C7CC;
+}
+.content .content .box .line::before {
+  left: 0;
+}
+.content .content .box .line::after {
+  right: 0;
+}
+.content .content .box .line::after,
+.content .content .box .line::before {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 200rpx;
+  height: 1px;
+  background: #F1F0F4;
+}
+.content .content .box .list-box {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.content .content .box .list-box .list-content {
+  border-radius: 3px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 10rpx;
+  width: 46%;
+  float: left;
+  height: 60px;
+  background-color: #F9F9FB;
+}
+.content .content .box .list-box .list-content .txt {
+  position: absolute;
+  top: 25rpx;
+  left: 15rpx;
+  width: 40%;
+  text-align: center;
+  line-height: 40rpx;
+}
+.content .content .box .list-box .list-content .txt .title {
+  color: #717073;
+  font-size: 25rpx;
+}
+.content .content .box .list-box .list-content .txt .num-txt {
+  color: #B5B5B7;
+  font-size: 20rpx;
+}
+.content .content .box .list-box .list-content .image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+}
+.content .content .box .list-box .list-content .image view {
+  position: relative;
+  width: 100%;
+}
+.content .content .box .list-box .list-content .image view image:nth-of-type(1) {
+  width: 75rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 30rpx;
+  bottom: 0;
+  z-index: 9;
+}
+.content .content .box .list-box .list-content .image view image:nth-of-type(2) {
+  width: 60rpx;
+  height: 85rpx;
+  position: absolute;
+  left: 10rpx;
+  bottom: 0rpx;
+  z-index: 8;
+}
+.content .content .box .list-box .list-content .image view image:nth-of-type(3) {
+  width: 20px;
+  height: 30px;
+  width: 50rpx;
+  height: 75rpx;
+  position: absolute;
+  left: 70rpx;
+  bottom: 0rpx;
+  z-index: 8;
+}

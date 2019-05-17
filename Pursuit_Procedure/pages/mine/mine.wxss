@@ -1,0 +1,85 @@
+.content {
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.content .part-one {
+  overflow: hidden;
+  width: 100%;
+}
+.content .part-one .image-box {
+  float: left;
+}
+.content .part-one .image-box image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+.content .part-one .txt {
+  margin-left: 30rpx;
+  float: left;
+}
+.content .part-one .txt .id {
+  font-size: 28rpx;
+  color: #B8B8B8;
+}
+.content .part-one .txt text {
+  font-size: 28rpx;
+}
+.content .part-two {
+  margin-top: 30rpx;
+  margin-bottom: 100rpx;
+}
+.content .part-two .list-box {
+  margin-top: 50rpx;
+  overflow: hidden;
+  width: 100%;
+}
+.content .part-two .list-box .image-box {
+  margin-top: 8rpx;
+  float: left;
+}
+.content .part-two .list-box .image-box image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.content .part-two .list-box .txt {
+  margin-left: 30rpx;
+  float: left;
+  text-align: center;
+}
+.content .part-two .list-box .txt .title {
+  font-size: 30rpx;
+  color: #686868;
+}
+.content .part-two .list-box .txt .title1 {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #686868;
+}
+.content .part-two .list-box .txt view:nth-of-type(2) {
+  margin-top: 5rpx;
+  font-size: 25rpx;
+  color: #9A9A9A;
+}
+.content .part-two .list-box .btn {
+  margin-top: 15rpx;
+  float: right;
+  padding: 5rpx 20rpx;
+  border-radius: 30rpx;
+  border: 1px solid #E6898A;
+  color: #E6898A;
+  font-size: 30rpx;
+}
+.content .part-two .list-box .turnRight {
+  float: right;
+  color: #9C9CA4;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 15rpx;
+}
+.content .part-two .list-box .turnRight image {
+  width: 50rpx;
+  height: 50rpx;
+}
